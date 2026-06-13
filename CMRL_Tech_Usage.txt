@@ -1,0 +1,40 @@
+SOFTWARE AND TECHNOLOGY USED
+1. Programming Language: Python
+Purpose: Core implementation of the system.
+Code: import streamlit as st (Line 1)
+2. Streamlit (UI Framework)
+Purpose: Web-based chatbot interface.
+Code: st.set_page_config(...) (Line 7)
+       st.chat_input(...) (Line 150)
+3. PyPDF (Document Processing)
+Purpose: Extract text from PDFs.
+Code: from pypdf import PdfReader (Line 3)
+       reader = PdfReader(...) (Line 60)
+4. Ollama (LLM)
+Purpose: Natural language understanding.
+Code: llm = ChatOllama(model='gemma3') (Line 20)
+       llm.invoke(prompt) (Line 130)
+5. LangChain
+Purpose: Integrate LLM.
+Code: from langchain_community.chat_models import ChatOllama (Line 4)
+6. RAG (Retrieval)
+Purpose: Retrieve contractor data.
+Code: load_data(uploaded_files) (Line 80)
+7. Data Extraction
+Purpose: Convert PDF text to structured data.
+Code: def extract_data(text): (Line 30)
+8. Query Interpretation (AI)
+Purpose: Convert user query to rules.
+Code: def interpret_query(query): (Line 110)
+9. Filtering
+Purpose: Apply conditions.
+Code: def apply_filters(data, rules): (Line 140)
+10. Scoring System
+Purpose: Evaluate contractors.
+Code: def calculate_score(d): (Line 90)
+11. Ranking
+Purpose: Sort contractors.
+Code: sorted(..., reverse=True) (Line 175)
+12. Chatbot Interface
+Purpose: Chat-like interaction.
+Code: st.chat_input(), st.chat_message() (Line 150–180)
